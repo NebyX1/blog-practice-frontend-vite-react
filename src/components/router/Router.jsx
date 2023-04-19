@@ -14,17 +14,26 @@ import { Footer } from "../layouts/Footer";
 export const Router = () => {
   return (
     <BrowserRouter>
-    <Header />
-    <Nav />
+      <Header />
+      <Nav />
       <section>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/articulos" element={<Articulos />} />
           <Route path="/crear" element={<Crear />} />
-          <Route path="/editar" element={<Editar />} />
-          <Route path="/busqueda" element={<Busqueda />} />
-          <Route path="/articulo-single" element={<ArticuloSingle />} />
+          <Route path="/editar/:id" element={<Editar />} />
+          <Route path="/buscar/:busqueda" element={<Busqueda />} />
+          <Route path="/articulo-single/:id" element={<ArticuloSingle />} />
+          <Route
+            path="*"
+            element={
+              <div className="jumbo">
+                <h1>Error 404</h1>
+                <p>La página que busca no existe</p>
+              </div>
+            }
+          />
         </Routes>
       </section>
       <Sidebar />

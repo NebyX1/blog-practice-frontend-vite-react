@@ -16,6 +16,7 @@ body {
     "content content content lateral"
     "footer footer footer footer";
   grid-template-rows: 100px 70px 1fr 70px;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 
 .header {
@@ -89,7 +90,7 @@ body {
   flex-flow: column wrap;
   justify-content: center;
   align-items: initial;
-  height: 100%; 
+  height: 100%;
 }
 
 .articulo-item {
@@ -109,21 +110,22 @@ body {
   max-height: 225px;
 }
 
-.articulo-item .mascara{
+.articulo-item .mascara {
   width: 20%;
   overflow: hidden;
-  margin-right: 40px
-  }
+  margin-right: 40px;
+}
 
-  .articulo-item .mascara img{
-    width: 100%
-    }
+.articulo-item .mascara img {
+  width: 100%;
+}
 
 .articulo-item .edit {
   margin-right: 4px;
 }
 .button,
 button,
+.edit,
 input[type="submit"],
 input[type="button"] {
   text-decoration: none;
@@ -169,8 +171,8 @@ input[type="button"] {
   box-shadow: 0px 0px 12px #797676;
 }
 
-.lateral input[type="text"],
-.lateral textarea {
+input[type="text"],
+textarea {
   display: block;
   margin: 0 auto;
   margin-top: 15px;
@@ -221,7 +223,16 @@ input[type="button"] {
   }
 }
 
-.textarea {
+.articulo-item h3 a{
+  text-decoration: none;
+  color: black;
+  }
+
+  .articulo-item h3 a:hover{
+    color: blue;
+    }
+
+textarea {
   resize: none;
 }
 
@@ -229,27 +240,61 @@ input[type="button"] {
   display: block !important;
 }
 
-.jumbo{
+.jumbo {
   position: relative;
   background: white;
-  border-radius:10px;
+  border-radius: 10px;
   box-shadow: 0px 0px 6px #ddd;
-  margin: 25px; 
-  width: 100%; 
+  margin: 25px;
+  width: 100%;
   padding: 55px;
   padding-bottom: 75px;
 }
-  
-  .jumbo h1{
-  font-size:30px;
+
+.jumbo h1 {
+  font-size: 30px;
   color: #444;
-  }
-  
-  .jumbo p{
+}
+
+.jumbo p {
   display: block;
   margin-bottom: 40px;
+}
+
+
+.jumbo .mascara{
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
   }
 
-  .datos{
-    align-items: self-start;
+
+.datos {
+  align-items: self-start;
+}
+
+.form-group {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-group label {
+  display: block;
+  text-align: left;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea {
+  border: 1px solid #ddd;
+  outline: 0;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.form-group .mascara{
+  width: 150px;
   }
